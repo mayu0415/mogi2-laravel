@@ -1,0 +1,254 @@
+/* =========================
+   全体レイアウト
+========================= */
+body {
+  margin: 0;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  color: #333;
+  background-color: #f7f7f7;
+}
+
+.item-detail {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 20px;
+  background-color: #fff;
+}
+
+/* =========================
+   上段（画像＋基本情報）
+========================= */
+.item-detail__top {
+  display: flex;
+  gap: 40px;
+  padding: 30px 0;
+}
+
+/* 画像 */
+.item-detail__image {
+  width: 420px;
+  height: 420px;
+  background-color: #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.item-detail__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.item-detail__placeholder {
+  color: #666;
+  font-size: 18px;
+}
+
+/* 右側情報 */
+.item-detail__info {
+  flex: 1;
+}
+
+/* 商品名 */
+.item-detail__name {
+  font-size: 26px;
+  font-weight: bold;
+  margin: 0 0 8px;
+}
+
+/* ブランド */
+.item-detail__brand {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 16px;
+}
+
+/* 価格 */
+.item-detail__price {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.item-detail__price span {
+  font-size: 14px;
+  font-weight: normal;
+  margin-left: 6px;
+}
+
+/* =========================
+    いいね /  コメント
+========================= */
+.item-detail__actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.icon-button {
+  border: none;
+  background: none;
+  font-size: 22px;
+  cursor: pointer;
+  padding: 0;
+}
+
+.icon-button.is-liked {
+  color: #e53935;
+}
+
+.icon-button:hover {
+  opacity: 0.7;
+}
+
+.count {
+  font-size: 14px;
+  margin-right: 12px;
+}
+
+/* =========================
+   購入ボタン（赤）
+========================= */
+.item-detail__buy {
+  display: block;
+  width: 100%;
+  max-width: 320px;
+  padding: 14px 0;
+  background-color: #e53935;
+  color: #fff;
+  text-align: center;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 4px;
+  margin-bottom: 30px;
+}
+
+.item-detail__buy:hover {
+  opacity: 0.85;
+}
+
+/* =========================
+   商品説明・情報
+========================= */
+.item-detail__description,
+.item-detail__data {
+  margin-top: 30px;
+}
+
+.item-detail__description h2,
+.item-detail__data h2 {
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+.item-detail__description p {
+  line-height: 1.7;
+}
+
+/* カテゴリタグ */
+.item-tag {
+  display: inline-block;
+  background-color: #eee;
+  border-radius: 12px;
+  padding: 4px 12px;
+  font-size: 12px;
+  margin-right: 6px;
+}
+
+/* =========================
+   コメント一覧
+========================= */
+.item-detail__comments {
+  margin-top: 40px;
+}
+
+.item-detail__comments h2 {
+  font-size: 18px;
+  margin-bottom: 16px;
+}
+
+.comment {
+  margin-bottom: 20px;
+}
+
+.comment__user {
+  display: flex;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.comment__icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #ccc;
+  margin-right: 10px;
+}
+
+.comment__name {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.comment__content {
+  background-color: #f1f1f1;
+  padding: 10px 14px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+/* =========================
+   コメント投稿フォーム
+========================= */
+.item-detail__comment-form {
+  margin-top: 30px;
+}
+
+.item-detail__comment-form h2 {
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+.item-detail__comment-form textarea {
+  width: 100%;
+  height: 120px;
+  padding: 10px;
+  font-size: 14px;
+  resize: none;
+  box-sizing: border-box;
+  margin-bottom: 12px;
+}
+
+/* 赤ボタン共通 */
+.btn-red {
+  width: 100%;
+  max-width: 320px;
+  padding: 14px 0;
+  background-color: #e53935;
+  color: #fff;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.btn-red:hover {
+  opacity: 0.85;
+}
+
+/* =========================
+   レスポンシブ対応
+========================= */
+@media screen and (max-width: 768px) {
+  .item-detail__top {
+    flex-direction: column;
+  }
+
+  .item-detail__image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+  }
+}

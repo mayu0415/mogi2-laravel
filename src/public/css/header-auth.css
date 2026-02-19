@@ -1,0 +1,49 @@
+.header-auth {
+    background-color: #000;
+    height: 60px;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-auth__left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.header-auth__logo {
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.header-auth__search {
+    width: 260px;
+    height: 32px;
+    padding: 0 8px;
+}
+
+.header-auth__nav {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.header-auth__link {
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.header-auth__button {
+    background-color: #fff;
+    color: #000;
+    padding: 6px 12px;
+    text-decoration: none;
+    font-size: 14px;
+}

@@ -1,0 +1,167 @@
+/* ===== 全体 ===== */
+.sell {
+    background: #f7f7f7;
+    padding: 16px 0;
+}
+
+.sell__inner {
+    width: 620px;
+    /* ← 全体をさらに細く */
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px 28px 24px;
+    box-sizing: border-box;
+}
+
+/* ===== タイトル ===== */
+.sell__title {
+    text-align: center;
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+/* ===== セクション ===== */
+.sell-block {
+    margin-bottom: 14px;
+    /* ← ギュッと詰める */
+}
+
+.sell-block__title,
+.sell-block_title {
+    font-size: 18px;
+    /* ← 見出しを大きく */
+    font-weight: 700;
+    margin-bottom: 8px;
+    text-align: left;
+}
+
+.sell-block_title--line {
+    padding-bottom: 4px;
+    border-bottom: 1px solid #ccc;
+}
+
+/* ===== 商品画像 ===== */
+.image-box {
+    border: 1px dashed #ccc;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 6px;
+}
+
+.image-box__btn {
+    padding: 6px 14px;
+    border: 1px solid #e74c6c;
+    color: #e74c6c;
+    border-radius: 6px;
+    font-size: 13px;
+}
+
+.image-box input {
+    display: none;
+}
+
+/* ===== フィールド ===== */
+.sell-field {
+    margin-bottom: 10px;
+    /* ← さらに詰める */
+}
+
+.sell-field__label {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 4px;
+    text-align: left;
+}
+
+/* ===== 入力共通 ===== */
+.sell-input,
+.sell-textarea,
+.sell-select {
+    width: 100%;
+    max-width: 520px;
+    /* ← 横幅を制限 */
+    box-sizing: border-box;
+}
+
+.sell-input {
+    height: 34px;
+    padding: 0 10px;
+    font-size: 14px;
+}
+
+.sell-textarea {
+    height: 70px;
+    padding: 6px 10px;
+    resize: none;
+}
+
+/* ===== 価格 ===== */
+.price-wrap {
+    position: relative;
+    max-width: 520px;
+}
+
+.price-wrap__yen {
+    position: absolute;
+    left: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 14px;
+}
+
+.sell-input--price {
+    padding-left: 24px;
+}
+
+/* ===== カテゴリー ===== */
+.category {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 520px;
+}
+
+.category-pill input {
+    display: none;
+}
+
+.category-pill__text {
+    display: inline-block;
+    padding: 6px 14px;
+    border: 1px solid #d33;
+    border-radius: 999px;
+    color: #d33;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* チェックされたら色を変える */
+.category-pill input:checked+.category-pill__text {
+    background-color: #d33;
+    color: #fff;
+}
+
+/* ===== エラー ===== */
+.sell-error {
+    font-size: 12px;
+    color: #e74c6c;
+    margin-top: 2px;
+}
+
+/* ===== 送信ボタン ===== */
+.sell-submit {
+    width: 100%;
+    max-width: 520px;
+    height: 40px;
+    margin: 16px auto 0;
+    display: block;
+    background: #e74c6c;
+    color: #fff;
+    border: none;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 4px;
+    cursor: pointer;
+}
