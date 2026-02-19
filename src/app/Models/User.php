@@ -48,28 +48,5 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    //出品した商品
-    public function items()
-    {
-        return $this->hasMany(Item::class);
-    }
-
-    //コメントした履歴
-    public function comments()
-    {
-        return $this->hasMany(Comment::class);
-    }
-
-    //いいねした商品一覧
-    public function favorites()
-    {
-        return $this->hasMany(Favorite::class);
-    }
-
-    //購入した注文一覧
-    public function orders()
-    {
-        return $this->hasMany(Order::class, 'buyer_id');
-    }
 
 }
