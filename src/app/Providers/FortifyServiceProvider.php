@@ -24,6 +24,10 @@ class FortifyServiceProvider extends ServiceProvider
     public function register(): void
     {
         $this->app->bind(\Laravel\Fortify\Http\Requests\LoginRequest::class, \App\Http\Requests\LoginRequest::class);
+        $this->app->singleton(\Laravel\Fortify\Contracts\LoginResponse::class, \App\Http\Responses\LoginResponse::class);
+
+        $this->app->singleton(\Laravel\Fortify\Contracts\LogoutResponse::class,\App\Http\Responses\LogoutResponse::class
+);
     }
 
     /**
@@ -32,10 +36,24 @@ class FortifyServiceProvider extends ServiceProvider
     public function boot(): void
     {
         Fortify::authenticateUsing(function (Request $request) {
-            if (Auth::attempt(
-                $request->only('email', 'password'),
-                $request->boolean('remember')
-            )) {
+            $loginType = $request->input('login_type');
+
+            if ($loginType === 'admin') {
+                $credentials = [
+                'email' => $request->email,
+                'password' => $request->password,
+                'role' => 1,
+                ];
+
+            } else {
+                $credentials = [
+                    'email' => $request->email,
+                    'password' => $request->password,
+                    'role' => 0,
+                ];
+            }
+
+            if (Auth::attempt($credentials, $request->boolean('remember'))) {
                 return Auth::user();
             }
 
@@ -58,6 +76,10 @@ class FortifyServiceProvider extends ServiceProvider
         Fortify::updateUserProfileInformationUsing(UpdateUserProfileInformation::class);
         Fortify::updateUserPasswordsUsing(UpdateUserPassword::class);
         Fortify::resetUserPasswordsUsing(ResetUserPassword::class);
+
+        Fortify::verifyEmailView(function () {
+            return view('verify-email');
+        });
 
         RateLimiter::for('login', function (Request $request) {
             $throttleKey = Str::transliterate(Str::lower($request->input(Fortify::username())).'|'.$request->ip());

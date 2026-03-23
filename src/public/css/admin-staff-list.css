@@ -1,0 +1,55 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #f7f7f7;
+    font-family: Arial, sans-serif;
+}
+
+.staff-list {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 48px 20px 80px;
+}
+
+.staff-list__title {
+    font-size: 28px;
+    font-weight: bold;
+    margin: 0 0 32px;
+    padding-left: 18px;
+    border-left: 6px solid #000;
+}
+
+.staff-list__table-wrapper {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.staff-list__table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.staff-list__table th,
+.staff-list__table td {
+    padding: 18px 12px;
+    text-align: center;
+    border-bottom: 1px solid #e5e5e5;
+    font-size: 18px;
+}
+
+.staff-list__table th {
+    color: #666;
+    font-weight: bold;
+    background-color: #fff;
+}
+
+.staff-list__detail-link,
+.staff-list__detail-link:visited {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}

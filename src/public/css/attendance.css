@@ -1,0 +1,95 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin-inline: 0;
+    font-family: Arial, sans-serif;
+    background-color: #F7F7F7;
+}
+
+.attendance {
+    min-height: calc(100vh - 60px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.attendance__status {
+    background-color: #E0E0E0;
+    padding: 6px 18px;
+    border-radius: 20px;
+    font-size: 14px;
+    margin-bottom: 24px;
+}
+
+.attendance__date {
+    font-size: 22px;
+    margin-bottom: 16px;
+}
+
+.attendance__time {
+    font-size: 72px;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+.attendance__button {
+    width: 160px;
+    height: 48px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.attendance__button:hover {
+    opacity: 0.9;
+}
+
+.attendance__actions {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+    justify-content: center;
+}
+
+.attendance__message {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.attendance__button {
+    width: 160px;
+    height: 48px;
+    border: none;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* 黒ボタン（出勤/退勤） */
+.attendance__button--primary {
+    background-color: #000;
+    color: #fff;
+}
+
+.attendance__button--primary:hover {
+    opacity: 0.9;
+}
+
+/* 白っぽいボタン（休憩入り用：今はdisabled想定） */
+.attendance__button--ghost {
+    background-color: #f3f3f3;
+    color: #111;
+    border: 1px solid #ddd;
+}
+
+.attendance__button--ghost:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}

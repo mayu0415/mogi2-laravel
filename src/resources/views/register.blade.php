@@ -19,7 +19,7 @@
         @csrf
         {{-- ユーザー名 --}}
         <div class="form-group">
-            <label>ユーザー名</label>
+            <label>名前</label>
             <input type="text" name="name" value="{{ old('name') }}">
             @error('name')
                 <p class="error">{{ $message }}</p>
@@ -47,7 +47,7 @@
         </div>
         {{-- 確認用パスワード --}}
         <div class="form-group">
-            <label>確認用パスワード</label>
+            <label>パスワード確認</label>
             <input type="password" name="password_confirmation">
             @if($errors->has('password'))
                 @foreach($errors->get('password') as $msg)

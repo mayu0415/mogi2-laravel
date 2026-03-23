@@ -2,7 +2,7 @@
 
 ## 環境構築
 **Dockerビルド**
-1. `git clone git@github.com:mayu0415/mogitest-laravel.git
+1. `git clone git@github.com:mayu0415/mogi2-laravel.git
 2. DockerDesktopアプリを立ち上げる
 3. `docker-compose up -d --build`
 
@@ -43,13 +43,36 @@ php artisan migrate
 php artisan db:seed
 ```
 
+## テスト
+
+・以下のコマンドでテストできます。
+```bash
+php artisan test
+```
+
+・特定のテストのみ実行する場合
+```bash
+php artisan test --filter=テストクラス名
+```
+
+・テスト実行後などでデータが消えた場合は、以下を実行してください。
+```bash
+php artisan migrate:fresh --seed
+```
+
+## ログイン情報(管理者)
+
+・以下の情報を入力して管理者ログインしてください。
+- メールアドレス: admin@example.com
+- パスワード: password
+
 ## 使用技術(実行環境)
 - PHP8.2.30
 - Laravel8.83.29
 - MySQL8.0.26
 
 ## ER図
-![ER図](./er_diagram.png)
+![ER図](./src/er_diagram.png)
 
 ## URL
 - 開発環境：http://localhost/

@@ -1,0 +1,76 @@
+/* 全体 */
+body {
+    margin: 0;
+    background-color: #ffffff;
+    font-family: sans-serif;
+}
+
+/* メイン中央配置 */
+.verify-main {
+    height: calc(100vh - 80px);
+    /* header分調整 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 中央コンテナ */
+.verify-container {
+    text-align: center;
+}
+
+/* 説明テキスト */
+.verify-text {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 40px;
+}
+
+.verify-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* 認証ボタン */
+.verify-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 260px;
+    height: 48px;
+
+    margin: 0 auto;
+
+    background-color: #e0e0e0;
+    border: 2px solid #999;
+    border-radius: 6px;
+
+    font-size: 18px;
+    color: #333;
+    text-decoration: none;
+
+    padding: 0;
+    line-height: normal;
+
+}
+
+.verify-container form {
+    width: 200px;
+    margin-top: 3px;
+}
+
+.resend-button {
+    width: 100%;
+
+    background: none;
+    border: none;
+
+    text-align: center;
+
+    color: #007BFF;
+    font-size: 14px;
+    cursor: pointer;
+}
